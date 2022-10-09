@@ -1,2 +1,2 @@
 # COSC-350
-Data Structures &amp; Algorithms
+Class discussion and practice for Data Structures &amp; Algorithms
