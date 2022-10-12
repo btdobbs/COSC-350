@@ -2,7 +2,7 @@
 
 using namespace std;
 
-/* Prompt for two numbers, x and y, and outputs their sum */
+/* Simple I/O:  Prompt for two numbers, x and y, and outputs their sum */
 int main( ) {
     int x, y;
     cout << "Please enter two numbers: ";
