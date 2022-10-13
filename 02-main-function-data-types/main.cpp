@@ -39,5 +39,12 @@ int main() {
     //Note: No strings
     //Note:  The size of any address is typically 8 bytes for 64 bit system (8*8=64)
     cout << "memory address size = " << sizeof(&b) << endl;
+        //Note pi_d = pi_f check is false
+    double pi_d = 3.14;
+    float pi_f = 3.14;
+    if (pi_d == pi_f)
+      cout << "float and double equal\n";
+    else
+      cout << "float and double not equal\n";
     return 0;
 }
