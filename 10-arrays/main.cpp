@@ -14,6 +14,15 @@ void printArray(const int a[], int arraySize) {
   cout << "\n";
 }
 
+void extendArray(const int a[], int arraySize, int aNewArray[], int value)
+{
+  for(int i = 0; i < arraySize; i++)
+  {
+    aNewArray[i] = a[i];
+  }
+  aNewArray[arraySize] = value;
+}
+
 int main() {
   cout << "Array declared with specific values.\n";
   int a1[] = {4, 2, 7, 8, 5, 1};
@@ -47,4 +56,16 @@ int main() {
   }
   a6[arraySize] = 9;
   printArray(a6, arraySize + 1);
+  
+  // int array with six initialized values
+  int a[] = {4, 2, 7, 8, 5, 1};
+  // you can't change the size of an existing array without some work
+  int b[7];
+  //can't cout an array because we just get its memory address. We need to create a function to print
+  cout << a << endl;
+  printArray(a,6);
+  // to extend an array you have to copy values to a larger array
+  // below is a fixed example; we can do the same thing a bit cleaner with pointers (later)
+  extendArray(a,6,b,9);
+  printArray(b,7);
 }
