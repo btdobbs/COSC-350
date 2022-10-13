@@ -9,6 +9,9 @@ int main ()
   enum weekend {saturday, sunday};
   //you can force the first value to be a specific number and subsequent values are incremented by 1
   //Note, numbers can be negative but they can not collide.  Forexample, setting A to 9 would generate a compile error
+  enum test {A = -2, B, C};
+  cout << A << "\n";
+  cout << B << "\n";
   enum TestType {A=3,B,C,D=10,E,F};
   for(int i = 0; i<15; i++)
   {
