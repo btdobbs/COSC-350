@@ -79,6 +79,8 @@ int& DynamicIntegerArray::operator[](int index)
 
 int main() {
     DynamicIntegerArray a1;
+    a1[0] = 6;
+    int x = a1[0];
     cout << "\na1\n";
     a1.print();
     DynamicIntegerArray a2(10);
