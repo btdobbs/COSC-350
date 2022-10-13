@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     //a variable lives within the braces its defined
     //(variable is put on the stack when declared and removed at the end brace)
+    //value of a variable will cycle back to min if you increment past max value and vice versa
     //only two values allowed for bool but still takes one byte
     bool b = true;
     //sizeof gives bytes used for storage
