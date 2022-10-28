@@ -15,15 +15,14 @@ void initArray(char a[], int arraySize)
     }
 }
 
-void printArray(const char a[], int arraySize)
-{
-    for(int i = 0; i < arraySize; i++)
-    {
-        cout << a[i];
-        if (i < arraySize-1)
-            cout << ", ";
+void printArray(const int a[], int arraySize) {
+    cout << "[";
+    for (int i = 0; i < arraySize-1; i++) {
+        cout << a[i] << ",";
     }
-    cout << "\n";
+    if (arraySize != 0)
+        cout << a[arraySize-1];
+    cout << "]" << endl;
 }
 
 int insertionSort(char a[], int arraySize)
