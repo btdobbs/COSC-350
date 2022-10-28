@@ -54,8 +54,8 @@ int main() {
     int a[item_count] = {1,2,3,4,5};
     print(a, item_count);
     //Recursion
-    //Identify base case
-    //Identify sub-problem and recur on the sub-problem
+    //1. Identify base case
+    //2. Identify sub-problem and recur on the sub-problem
     //Example: In discrete math, a list is an ordered structure with controlled access via head and tail operators
     //l = <2,3,4,5,6>
     //head(l) = 2
