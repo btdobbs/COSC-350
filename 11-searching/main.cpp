@@ -2,15 +2,14 @@
 
 using namespace std;
 
-void printArray(const int a[], int arraySize)
-{
-  for(int i = 0; i < arraySize; i++)
-  {
-    cout << a[i];
-    if (i < arraySize-1)
-      cout << ", ";
-  }
-  cout << "\n";
+void printArray(const int a[], int arraySize) {
+    cout << "[";
+    for (int i = 0; i < arraySize-1; i++) {
+        cout << a[i] << ",";
+    }
+    if (arraySize != 0)
+        cout << a[arraySize-1];
+    cout << "]" << endl;
 }
 
 //return the index of first occurence of searchValue or -1 if searchValue is not found
