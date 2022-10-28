@@ -28,8 +28,7 @@ int sum(int a[], int n){
 int Fibonacci(int k){
     if (k <= 1)
         return k;
-    else
-        return Fibonacci(k - 1) + Fibonacci(k - 2);
+    return Fibonacci(k - 1) + Fibonacci(k - 2);
 }
 
 //reverse elements in input array starting with index i and ending at index j
