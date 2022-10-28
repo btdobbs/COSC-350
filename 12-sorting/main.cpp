@@ -3,12 +3,13 @@
 using namespace std;
 
 void printArray(const int a[], int arraySize) {
-  for (int i = 0; i < arraySize; i++) {
-    cout << a[i];
-    if (i < arraySize - 1)
-      cout << ", ";
-  }
-  cout << "\n";
+    cout << "[";
+    for (int i = 0; i < arraySize-1; i++) {
+        cout << a[i] << ",";
+    }
+    if (arraySize != 0)
+        cout << a[arraySize-1];
+    cout << "]" << endl;
 }
 
 void insertionSort(int a[], int arraySize) {
