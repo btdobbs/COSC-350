@@ -18,6 +18,7 @@ void swap(int &a, int &b){
     b = temp;
 }
 
+//sum the first n items of an array
 int sum(int a[], int n){
     if (n == 1)  //test for base case
         return a[0];
