@@ -3,15 +3,15 @@
 using namespace std;
 
 // Note, arrays are always passed by reference hence the need for size.
-// Also, array declared with const so new values can't be assigned.
+// Also, array declared with const so new values can't be assigned to elements in the array.
 void printArray(const int a[], int arraySize) {
-  for (int i = 0; i < arraySize; i++) {
-    // const array paramenter prevents a[i] = <new value>
-    cout << a[i];
-    if (i < arraySize - 1)
-      cout << ", ";
+  cout << "[";
+  for (int i = 0; i < arraySize-1; i++) {
+    cout << a[i] << ",";
   }
-  cout << "\n";
+  if (arraySize != 0)
+      cout << a[arraySize-1];
+  cout << "]" << endl;
 }
 
 void extendArray(const int a[], int arraySize, int aNewArray[], int value)
