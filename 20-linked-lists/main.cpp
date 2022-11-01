@@ -47,6 +47,7 @@ void LinkedList::add_front(const int key) {
 }
 
 void LinkedList::remove_front() {
+    if (empty()) return;
     Node *temp = head;
     head = temp->next;
     delete temp;
