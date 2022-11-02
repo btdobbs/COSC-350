@@ -78,7 +78,7 @@ void LinkedList::print() {
 
 int main() {
     LinkedList linked_list;
-    //cout << linked_list.front() << endl;
+    //cout << linked_list.front() << endl; //note this will produce an error for an empty list
     linked_list.remove_front();
     linked_list.print();
     linked_list.add_front(1);
