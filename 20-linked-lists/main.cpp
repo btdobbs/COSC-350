@@ -18,6 +18,7 @@ public:
     int front() const;
     void add_front(int key);
     void remove_front();
+    bool exists(int key);
     void print();
 private:
     Node *head;
@@ -53,6 +54,16 @@ void LinkedList::remove_front() {
     delete temp;
 }
 
+bool LinkedList::exists(int key) {
+    Node *temp = head;
+    while(temp != nullptr) {
+        if (temp->key == key)
+            return true;
+        temp = temp->next;
+    }
+    return false;
+}
+
 void LinkedList::print() {
     cout << "<";
     Node *temp = head;
@@ -67,6 +78,8 @@ void LinkedList::print() {
 
 int main() {
     LinkedList linked_list;
+    //cout << linked_list.front() << endl;
+    linked_list.remove_front();
     linked_list.print();
     linked_list.add_front(1);
     linked_list.add_front(2);
@@ -77,6 +90,7 @@ int main() {
     linked_list.remove_front();
     cout << linked_list.front() << endl;
     linked_list.print();
+    cout << linked_list.exists(3) << endl;
+    cout << linked_list.exists(9) << endl;
     return 0;
 }
-
