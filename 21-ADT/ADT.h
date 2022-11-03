@@ -13,7 +13,7 @@ public:
     Number operator >(Number n);
     Number operator =(Number n);
     Number operator ==(Number n);
-    Number successor(Number n);
-    Number predecessor(Number n);
+    Number successor();
+    Number predecessor();
 };
 
