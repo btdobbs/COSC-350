@@ -15,7 +15,7 @@ int main() {
     while (p.has_next()){
         Element e = p.element();
         p = p.next();
-        e.print();
+        std::cout << e.to_string();
     }
     return 0;
 }
