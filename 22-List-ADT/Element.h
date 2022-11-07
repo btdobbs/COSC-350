@@ -1,4 +1,4 @@
 class Element{
 public:
-    void print();
+    void to_string();
 };
