@@ -1,6 +1,6 @@
 #include "Element.h"
 //LIFO (last in first out)
-//cafeteria plates, pez, web, undo
+//cafeteria plates, pez, pringles, web, undo
 //use virtual keyword to behave more like an interface
 class Stack{
 public:
