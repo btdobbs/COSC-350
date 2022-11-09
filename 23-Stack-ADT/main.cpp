@@ -5,7 +5,7 @@
 using namespace std;
 
 void reverse(Vector v){
-    Stack stack;
+    HundredArrayStack stack;
     for (int i = 0; i < 10; i++) {
         Element e;
         stack.push(e);
