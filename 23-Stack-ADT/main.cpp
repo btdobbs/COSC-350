@@ -22,6 +22,6 @@ int main(){
         Element e;
         vector.insert(i,e);
     }
-
+    reverse(vector);
     //Other uses grouping match (i.e., (),{},[])
 }
