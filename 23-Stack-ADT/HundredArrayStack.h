@@ -6,8 +6,8 @@ private:
     Element a[100]={};
 public:
     void push(Element e) override {
+        a[_size] = e;
         _size++;
-        a[_size-1] = e;
     }
 
     void pop() override {
