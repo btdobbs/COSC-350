@@ -11,7 +11,7 @@ public:
     }
 
     void pop() override {
-        _size -=1;
+        _size--;
     }
 
     Element top() override {
