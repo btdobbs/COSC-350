@@ -1,96 +1,87 @@
 #include <iostream>
+#include "CharacterList.h"
 
 using namespace std;
 
-class Node{
-private:
-    int key;
-    Node *next;
-
-    friend class LinkedList;
-};
-
-class LinkedList{
-public:
-    LinkedList();
-    ~LinkedList();
-    bool empty() const;
-    int front() const;
-    void add_front(int key);
-    void remove_front();
-    bool exists(int key);
-    void print();
-private:
-    Node *head;
-};
-
-LinkedList::LinkedList() {
-    head = nullptr;
+void add_front(CharacterList &il){
+    char target_char;
+    cout << "Enter char to add: ";
+    cin >> target_char;
+    il.add_front(target_char);
 }
 
-LinkedList::~LinkedList() {
-    while(!empty()) remove_front();
+void add_back(CharacterList &il){
+    char target_char;
+    cout << "Enter char to add: ";
+    cin >> target_char;
+    il.add_back(target_char);
 }
 
-bool LinkedList::empty() const {
-    return head == nullptr;
+void add(CharacterList &il){
+    char target_char;
+    char search_char;
+    cout << "Enter char to add: ";
+    cin >> target_char;
+    cout << "Enter char to add after: ";
+    cin >> search_char;
+    il.add_after(target_char, search_char);
 }
 
-int LinkedList::front() const {
-    return head->key;
-}
-
-void LinkedList::add_front(const int key) {
-    Node *n = new Node;
-    n->key = key;
-    n->next = head;
-    head = n;
-}
-
-void LinkedList::remove_front() {
-    if (empty()) return;
-    Node *temp = head;
-    head = temp->next;
-    delete temp;
-}
-
-bool LinkedList::exists(int key) {
-    Node *temp = head;
-    while(temp != nullptr) {
-        if (temp->key == key)
-            return true;
-        temp = temp->next;
-    }
-    return false;
-}
-
-void LinkedList::print() {
-    cout << "<";
-    Node *temp = head;
-    while(temp != nullptr) {
-        cout << temp->key;
-        if (temp->next != nullptr)
-            cout << ", ";
-        temp = temp->next;
-    }
-    cout << ">" << endl;
+void remove(CharacterList &il){
+    char target_char;
+    cout << "Enter char to remove: ";
+    cin >> target_char;
+    il.remove(target_char);
 }
 
 int main() {
-    LinkedList linked_list;
-    //cout << linked_list.front() << endl; //note this will produce an error for an empty list
-    linked_list.remove_front();
-    linked_list.print();
-    linked_list.add_front(1);
-    linked_list.add_front(2);
-    linked_list.add_front(3);
-    linked_list.add_front(4);
-    linked_list.add_front(5);
-    linked_list.print();
-    linked_list.remove_front();
-    cout << linked_list.front() << endl;
-    linked_list.print();
-    cout << linked_list.exists(3) << endl;
-    cout << linked_list.exists(9) << endl;
+    CharacterList integer_list;
+    char option;
+    do{
+        cout << integer_list.to_string() << endl;
+        cout << "Size = " << integer_list.size() << endl;
+        cout << "Empty = " << integer_list.empty() << endl;
+        if (!integer_list.empty()){
+            cout << "Front = " << integer_list.front() << endl;
+            cout << "Back = " << integer_list.back() << endl;
+        }
+        cout << "Enter option:" << endl;
+        cout << "(1) add front" << endl;
+        cout << "(2) add back" << endl;
+        cout << "(3) add" << endl;
+        cout << "(4) remove front" << endl;
+        cout << "(5) remove back" << endl;
+        cout << "(6) remove" << endl;
+        cout << "(7) exit" << endl;
+        cout << "--> ";
+        cin >> option;
+        cout << endl;
+
+        switch (option) {
+            case '1':
+                add_front(integer_list);
+                break;
+            case '2':
+                add_back(integer_list);
+                break;
+            case '3':
+                add(integer_list);
+                break;
+            case '4':
+                integer_list.remove_front();
+                break;
+            case '5':
+                integer_list.remove_back();
+                break;
+            case '6':
+                remove(integer_list);
+                break;
+            case '7':
+                break;
+            default:
+                cout << option << " is not a valid option." << endl;
+                break;
+        }
+    }while (option != '7');
     return 0;
 }
