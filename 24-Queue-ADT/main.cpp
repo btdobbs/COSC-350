@@ -28,4 +28,5 @@ int main(){
                 break;
         }
     }while (option != 'x');
+    return 0;
 }
