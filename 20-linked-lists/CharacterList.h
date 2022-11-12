@@ -9,20 +9,14 @@ public:
     bool empty();
     char front();
     void add_front(char key);
-    //Question 1
-    void add_back(char key);
-    //Question 2
-    void add_after(char key, char search_key);
+    void add_back(char key);                   //Question 1
+    void add_after(char key, char search_key); //Question 2
     void remove_front();
-    //Question 3
-    void remove_back();
-    //Question 4
-    void remove(char key);
+    void remove_back();                        //Question 3
+    void remove(char key);                     //Question 4
     bool exists(char key);
-    //Question 5
-    int size();
-    //Question 6
-    char back();
+    int size();                                //Question 5
+    char back();                               //Question 6
     string to_string();
 private:
     Node *head = nullptr;
